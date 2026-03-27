@@ -325,7 +325,7 @@
       <a name="addrWidth" val="16"/>
       <a name="appearance" val="logisim_evolution"/>
       <a name="contents">addr/data: 16 16
-f000
+9405
 </a>
       <a name="dataWidth" val="16"/>
     </comp>
@@ -564,8 +564,8 @@ f000
     <wire from="(900,330)" to="(900,340)"/>
     <wire from="(910,250)" to="(970,250)"/>
     <wire from="(920,290)" to="(1000,290)"/>
-    <wire from="(920,300)" to="(1000,300)"/>
-    <wire from="(920,310)" to="(950,310)"/>
+    <wire from="(920,300)" to="(950,300)"/>
+    <wire from="(920,310)" to="(980,310)"/>
     <wire from="(920,320)" to="(940,320)"/>
     <wire from="(920,350)" to="(920,560)"/>
     <wire from="(920,560)" to="(970,560)"/>
@@ -584,8 +584,8 @@ f000
     <wire from="(940,320)" to="(940,700)"/>
     <wire from="(940,800)" to="(1030,800)"/>
     <wire from="(940,940)" to="(1010,940)"/>
-    <wire from="(950,310)" to="(950,520)"/>
-    <wire from="(950,310)" to="(980,310)"/>
+    <wire from="(950,300)" to="(1000,300)"/>
+    <wire from="(950,300)" to="(950,520)"/>
     <wire from="(950,520)" to="(970,520)"/>
     <wire from="(970,1390)" to="(970,1480)"/>
     <wire from="(970,1480)" to="(990,1480)"/>
