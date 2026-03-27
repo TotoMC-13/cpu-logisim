@@ -28,9 +28,9 @@ pub enum Instruction {
         imm: i16,
     },
 }
+
 #[derive(Debug, Clone, Copy)]
 #[repr(u8)]
-
 pub enum Register {
     R0 = 0,
     Ra = 1,
