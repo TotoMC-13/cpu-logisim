@@ -347,10 +347,10 @@
       <a name="label" val="R7"/>
       <a name="width" val="16"/>
     </comp>
-    <comp lib="9" loc="(1496,265)" name="Text">
+    <comp lib="9" loc="(1495,265)" name="Text">
       <a name="text" val="MUX_A"/>
     </comp>
-    <comp lib="9" loc="(1496,606)" name="Text">
+    <comp lib="9" loc="(1495,605)" name="Text">
       <a name="text" val="MUX_B"/>
     </comp>
     <wire from="(1030,1000)" to="(1030,1010)"/>
@@ -361,7 +361,7 @@
     <wire from="(1030,1250)" to="(1070,1250)"/>
     <wire from="(1030,1360)" to="(1030,1370)"/>
     <wire from="(1030,1370)" to="(1070,1370)"/>
-    <wire from="(1030,1490)" to="(1030,1500)"/>
+    <wire from="(1030,1480)" to="(1030,1500)"/>
     <wire from="(1030,1500)" to="(1070,1500)"/>
     <wire from="(1030,1610)" to="(1030,1620)"/>
     <wire from="(1030,1620)" to="(1070,1620)"/>

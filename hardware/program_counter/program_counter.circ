@@ -83,8 +83,8 @@
       <circ-port dir="in" pin="600,570" x="50" y="100"/>
       <circ-port dir="in" pin="640,510" x="50" y="80"/>
       <circ-port dir="in" pin="650,350" x="80" y="140"/>
-      <circ-port dir="in" pin="800,240" x="110" y="60"/>
       <circ-port dir="in" pin="800,480" x="50" y="70"/>
+      <circ-port dir="out" pin="800,240" x="110" y="60"/>
     </appear>
     <comp lib="0" loc="(550,510)" name="Pin">
       <a name="appearance" val="classic"/>
@@ -124,6 +124,7 @@
       <a name="appearance" val="classic"/>
       <a name="facing" val="west"/>
       <a name="label" val="Adress_Out"/>
+      <a name="type" val="output"/>
       <a name="width" val="16"/>
     </comp>
     <comp lib="0" loc="(800,480)" name="Pin">
