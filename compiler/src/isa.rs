@@ -50,6 +50,30 @@ pub enum Register {
     S3 = 15,
 }
 
+impl Register {
+    pub fn from_str(s: &str) -> Option<Register> {
+        match s.to_uppercase().as_str() {
+            "R0" | "ZERO" => Some(Register::R0),
+            "R1" | "RA" => Some(Register::Ra),
+            "R2" | "SP" => Some(Register::Sp),
+            "R3" | "GP" => Some(Register::Gp),
+            "R4" | "A0" => Some(Register::A0),
+            "R5" | "A1" => Some(Register::A1),
+            "R6" | "A2" => Some(Register::A2),
+            "R7" | "A3" => Some(Register::A3),
+            "R8" | "T0" => Some(Register::T0),
+            "R9" | "T1" => Some(Register::T1),
+            "R10" | "T2" => Some(Register::T2),
+            "R11" | "T3" => Some(Register::T3),
+            "R12" | "S0" => Some(Register::S0),
+            "R13" | "S1" => Some(Register::S1),
+            "R14" | "S2" => Some(Register::S2),
+            "R15" | "S3" => Some(Register::S3),
+            _ => None,
+        }
+    }
+}
+
 #[derive(Copy, Clone)]
 #[repr(u16)]
 pub enum OpCode {
@@ -78,4 +102,28 @@ pub enum OpCode {
 
     // J-type
     J = 0b1110,
+}
+
+impl OpCode {
+    pub fn from_str(s: &str) -> Option<OpCode> {
+        match s.to_uppercase().as_str() {
+            "ADD" => Some(OpCode::Add),
+            "SUB" => Some(OpCode::Sub),
+            "AND" => Some(OpCode::And),
+            "OR" => Some(OpCode::Or),
+            "XOR" => Some(OpCode::Xor),
+            "SLL" => Some(OpCode::Sll),
+            "SRL" => Some(OpCode::Srl),
+            "SRA" => Some(OpCode::Sra),
+            "SLT" => Some(OpCode::Slt),
+            "ADDI" => Some(OpCode::Addi),
+            "ANDI" => Some(OpCode::Andi),
+            "LW" => Some(OpCode::Lw),
+            "SW" => Some(OpCode::Sw),
+            "BEQ" => Some(OpCode::Beq),
+            "J" => Some(OpCode::J),
+            "JALR" => Some(OpCode::Jalr),
+            _ => None,
+        }
+    }
 }
