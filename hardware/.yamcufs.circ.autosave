@@ -31,9 +31,9 @@
   <lib desc="#BFH-Praktika" name="9"/>
   <lib desc="#Input/Output-Extra" name="10"/>
   <lib desc="#Soc" name="11"/>
-  <lib desc="file#program_counter\program_counter.circ" name="12"/>
+  <lib desc="file#alu\alu.circ" name="12"/>
   <lib desc="file#register_file\reg_file.circ" name="13"/>
-  <lib desc="file#alu\alu.circ" name="14"/>
+  <lib desc="file#program_counter\program_counter.circ" name="14"/>
   <main name="main"/>
   <options>
     <a name="gateUndefined" val="ignore"/>
@@ -163,6 +163,12 @@
       <a name="label" val="ALU_OP"/>
       <a name="labelfont" val="SansSerif bold 10"/>
       <a name="width" val="4"/>
+    </comp>
+    <comp lib="0" loc="(1360,340)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="V"/>
+      <a name="type" val="output"/>
     </comp>
     <comp lib="0" loc="(1390,470)" name="Tunnel">
       <a name="facing" val="north"/>
@@ -308,13 +314,13 @@
     <comp lib="1" loc="(940,940)" name="OR Gate">
       <a name="inputs" val="4"/>
     </comp>
-    <comp lib="12" loc="(490,280)" name="PC_Main">
-      <a name="label" val="PC_Main_1"/>
-    </comp>
+    <comp lib="12" loc="(1340,330)" name="ALU_Main"/>
     <comp lib="13" loc="(1100,290)" name="REG_File">
       <a name="label" val="REG_File_1"/>
     </comp>
-    <comp lib="14" loc="(1340,330)" name="ALU_Main"/>
+    <comp lib="14" loc="(490,280)" name="PC_Main">
+      <a name="label" val="PC_Main_1"/>
+    </comp>
     <comp lib="2" loc="(1080,500)" name="Multiplexer">
       <a name="width" val="16"/>
     </comp>
@@ -357,7 +363,8 @@
       <a name="addrWidth" val="16"/>
       <a name="appearance" val="logisim_evolution"/>
       <a name="contents">addr/data: 16 16
-9103 a213
+9406 9802 5448 9800 9901 9b01 d64b a98
+890 9a0 9bb1 effb e000
 </a>
       <a name="dataWidth" val="16"/>
       <a name="label" val="ROM_1"/>
@@ -448,6 +455,7 @@
     <wire from="(1280,330)" to="(1280,490)"/>
     <wire from="(1280,330)" to="(1290,330)"/>
     <wire from="(1340,330)" to="(1350,330)"/>
+    <wire from="(1340,340)" to="(1360,340)"/>
     <wire from="(1340,370)" to="(1390,370)"/>
     <wire from="(1350,140)" to="(1350,330)"/>
     <wire from="(1390,370)" to="(1390,470)"/>
