@@ -19,6 +19,9 @@ Theres a file called fibonacci_calculator.asm, its intended to be compiled using
 and then load the .hex into the ROM. After some clocks (recommend speeding it up on Logisim) you
 will be able to see the Fibonacci Number with n = 23 in the 10th register (t2)
 
+I chose n = 23 because the result is the max Fibonacci Sequence number I can calculate while
+using 16 bits in Compliment 2
+
 ### Main System (YAMCUFS)
 
 The complete Harvard architecture microcontroller, integrating the CPU core, instruction memory (ROM), and data memory (RAM).
