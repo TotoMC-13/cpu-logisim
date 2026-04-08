@@ -133,8 +133,8 @@ pub enum Pseudo {
     Nop,
     Mv { rd: Register, rs1: Register },
     Neg { rd: Register, rs1: Register },
-    Beqz { rd: Register, offset: i8 },
-    Bnez { rd: Register, offset: i8 },
+    Beqz { rs1: Register, offset: i8 },
+    Bnez { rs1: Register, offset: i8 },
     Li { rd: Register, imm: i16 }, // Para constantes de 4b o 16b
     Jr { rs1: Register },
     Ret,
@@ -144,6 +144,28 @@ impl Pseudo {
     pub fn from_str(s: &str) -> Option<Pseudo> {
         match s.to_uppercase().as_str() {
             "NOP" => Some(Pseudo::Nop),
+            "MV" => Some(Pseudo::Mv {
+                rd: Register::R0,
+                rs1: Register::R0,
+            }),
+            "NEG" => Some(Pseudo::Neg {
+                rd: Register::R0,
+                rs1: Register::R0,
+            }),
+            "BEQZ" => Some(Pseudo::Beqz {
+                rs1: Register::R0,
+                offset: 0,
+            }),
+            "BNEZ" => Some(Pseudo::Bnez {
+                rs1: Register::R0,
+                offset: 0,
+            }),
+            "LI" => Some(Pseudo::Li {
+                rd: Register::R0,
+                imm: 0,
+            }),
+            "JR" => Some(Pseudo::Jr { rs1: Register::R0 }),
+            "RET" => Some(Pseudo::Ret),
             _ => None,
         }
     }
@@ -168,17 +190,17 @@ impl Pseudo {
                 rs1: *rs1,
                 rs2: Register::R0,
             }],
-            Pseudo::Beqz { rd, offset } => vec![Instruction::BType {
+            Pseudo::Beqz { rs1, offset } => vec![Instruction::BType {
                 opcode: OpCode::Beq,
                 imm: *offset,
-                rs1: *rd,
+                rs1: *rs1,
                 rs2: Register::R0,
             }],
-            Pseudo::Bnez { rd, offset } => vec![
+            Pseudo::Bnez { rs1, offset } => vec![
                 Instruction::BType {
                     opcode: OpCode::Beq,
                     imm: 1,
-                    rs1: *rd,
+                    rs1: *rs1,
                     rs2: Register::R0,
                 },
                 Instruction::JType {
