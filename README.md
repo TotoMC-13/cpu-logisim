@@ -10,7 +10,7 @@ The processor and its components were built from the ground up using Logisim-evo
 
 ## Where to find Assembly instructions and more
 
-You can find them in either en_yacpufs_16b.pdf or es_yacpufs_16b.pdf. The only
+You can find them either in [en_yacpufs_16b.pdf](https://github.com/TotoMC-13/yamcufs-16b/blob/main/en_yacpufs_16b.pdf) or [es_yacpufs_16b.pdf](https://github.com/TotoMC-13/yamcufs-16b/blob/main/en_yacpufs_16b.pdf). The only
 difference is the language
 
 ## ASM Example
